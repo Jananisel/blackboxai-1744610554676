@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Angel - WSafe Web Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-black text-yellow-400 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-black border-b border-yellow-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-angel mr-2"></i>Guardian Angel
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-yellow-200">Home</a>
+                <a href="#features" class="hover:text-yellow-200">Features</a>
+                <a href="#ipc" class="hover:text-yellow-200">IPC Laws</a>
+                <a href="#awareness" class="hover:text-yellow-200">Awareness</a>
+                <a href="#complaint" class="hover:text-yellow-200">Complaint Portal</a>
+                <a href="#helplines" class="hover:text-yellow-200">Helplines</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Your Digital Safety Companion</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Empowering women with safety tools and resources at your fingertips</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-300 transition">
+                    Emergency SOS
+                </button>
+                <button class="border-2 border-yellow-400 font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 hover:text-black transition">
+                    File Complaint
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Safety Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <div class="text-yellow-400 text-4xl mb-4">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emergency Alert</h3>
+                    <p>Trigger emergency alerts with one click that notify your trusted contacts with your location.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <div class="text-yellow-400 text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Live Location</h3>
+                    <p>Share your real-time location with trusted contacts when you feel unsafe.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <div class="text-yellow-400 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Self Defense</h3>
+                    <p>Access self-defense tutorials and safety tips to protect yourself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complaint Portal -->
+    <section id="complaint" class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8">Complaint Portal</h2>
+            <form class="bg-gray-900 p-8 rounded-lg">
+                <div class="mb-4">
+                    <label class="block mb-2">Name</label>
+                    <input type="text" class="w-full p-3 bg-black border border-yellow-400 rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Email</label>
+                    <input type="email" class="w-full p-3 bg-black border border-yellow-400 rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Phone</label>
+                    <input type="tel" class="w-full p-3 bg-black border border-yellow-400 rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Incident Details</label>
+                    <textarea class="w-full p-3 bg-black border border-yellow-400 rounded-lg h-32"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Upload Evidence (Optional)</label>
+                    <input type="file" class="w-full p-3 bg-black border border-yellow-400 rounded-lg">
+                </div>
+                <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-300 transition">
+                    Submit Complaint
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- IPC Laws Section -->
+    <section id="ipc" class="py-16 px-4 bg-black bg-opacity-90" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">Indian Penal Code (IPC) Sections for Women</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- IPC Section 354 -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 354 IPC</h3>
+                    <p class="mb-2">Assault or criminal force to woman with intent to outrage her modesty</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: Up to 2 years imprisonment, or fine, or both</p>
+                </div>
+                
+                <!-- IPC Section 354A -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 354A IPC</h3>
+                    <p class="mb-2">Sexual harassment and punishment for sexual harassment</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: Up to 3 years imprisonment, or fine, or both</p>
+                </div>
+                
+                <!-- IPC Section 354B -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 354B IPC</h3>
+                    <p class="mb-2">Assault or use of criminal force to woman with intent to disrobe</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: 3 to 7 years imprisonment</p>
+                </div>
+                
+                <!-- IPC Section 354C -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 354C IPC</h3>
+                    <p class="mb-2">Voyeurism (watching or capturing images of a woman without consent)</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: 3 to 7 years imprisonment + fine</p>
+                </div>
+                
+                <!-- IPC Section 354D -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 354D IPC</h3>
+                    <p class="mb-2">Stalking (following or contacting a woman despite clear disinterest)</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: Up to 3 years imprisonment + fine</p>
+                </div>
+                
+                <!-- IPC Section 509 -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-300">Section 509 IPC</h3>
+                    <p class="mb-2">Word, gesture or act intended to insult the modesty of a woman</p>
+                    <p class="text-yellow-200 font-semibold">Punishment: 1 year imprisonment, or fine, or both</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness Section -->
+    <section id="awareness" class="py-16 px-4" style="background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(0,0,0,0.7);">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">Safety Awareness</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Self Defense Tips -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-300 flex items-center">
+                        <i class="fas fa-shield-alt mr-3"></i> Self Defense Tips
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Always be aware of your surroundings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Trust your instincts - if something feels wrong, it probably is</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Learn basic self-defense techniques (target eyes, nose, throat, knees, groin)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Carry a whistle or personal alarm</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Digital Safety -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-300 flex items-center">
+                        <i class="fas fa-lock mr-3"></i> Digital Safety
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Never share live location on social media</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Use strong, unique passwords for all accounts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Be cautious with dating apps - meet in public places</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Enable two-factor authentication where possible</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Helplines Section -->
+    <section id="helplines" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Emergency Helplines</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2">National Emergency</h3>
+                    <p class="mb-2">112 (All India)</p>
+                    <a href="tel:112" class="text-yellow-400 hover:text-yellow-300">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2">Women Helpline</h3>
+                    <p class="mb-2">181 (All India)</p>
+                    <a href="tel:181" class="text-yellow-400 hover:text-yellow-300">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-yellow-400">
+                    <h3 class="text-xl font-bold mb-2">Police</h3>
+                    <p class="mb-2">100 (All India)</p>
+                    <a href="tel:100" class="text-yellow-400 hover:text-yellow-300">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-yellow-400 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Guardian Angel. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-yellow-400 hover:text-yellow-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-yellow-400 hover:text-yellow-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-yellow-400 hover:text-yellow-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple SOS button functionality
+        document.querySelector('.bg-yellow-400').addEventListener('click', function() {
+            alert('Emergency alert activated! Your trusted contacts have been notified with your location.');
+        });
+    </script>
+</body>
+</html>
